@@ -1,14 +1,13 @@
-const array: Array<number> = [1, 2, 3, 4];
+//Dio Banking
+import { PeopleAccount } from './class/PeopleAccount';
+import { CompanyAccount } from './class/CompanyAccount';
 
-// const stringArray: string[] = ['1', 'struct', 'três'];
+const peopleAccount: PeopleAccount = new PeopleAccount(1, 'Igor', 10);
 
-// const buscaNumberArray = array.find(num => num === 2);
+peopleAccount.setName('Nathy');
+console.log(peopleAccount.getName());
+peopleAccount.deposit()
 
-// console.log("Número encontrado: ", buscaNumberArray);
+const companyAccount: CompanyAccount = new CompanyAccount('DioAccount', 10);
+companyAccount.deposit();
 
-array.forEach(num => {
-  if (num * 2 && num % 2 == 0) {
-    console.log("Cada elemento: ", num);
-  }
-}
-);

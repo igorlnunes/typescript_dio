@@ -66,12 +66,12 @@ function validateUser(user: string) {
   console.log(typeUser[user as keyof typeof typeUser]);
 }
 
-let user = 'admin';
+let user1 = 'admin';
 
-validateUser(user);
+validateUser(user1);
 validateUser('student');
-user = 'viewer';
-validateUser(user);
+user1 = 'viewer';
+validateUser(user1);
 
 //for
 for (let i = 0; i < 5; i++) {
@@ -84,6 +84,45 @@ while (numbr < 6) {
   console.log('Número do while:', numbr)
   numbr++;
 };
+
+// Manipulando arrays
+const array: Array<number> = [1, 2, 3, 4];
+
+const stringArray: string[] = ['1', 'struct', 'três'];
+
+const buscaNumberArray = array.find(num => num === 2);
+
+console.log("Número encontrado: ", buscaNumberArray);
+
+array.forEach(num => {
+  if (num * 2 && num % 2 == 0) {
+    console.log("Cada elemento: ", num);
+  }
+}
+);
+
+// Classes
+class User {
+  name: string;
+  age: number;
+
+  constructor(_name: string, _age: number) {
+    this.name = _name;
+    this.age = _age;
+  }
+
+  showName = () => {
+    console.log("Este é o nome do usuário:", this.name);
+    if (this.age > 18) {
+      console.log("Usuário %s tem %s e está apto a se alistar no exército!", this.name, this.age);
+    } else {
+      console.log("Este usuário não pode se alistar, tente daqui a %s anos", (18 - this.age));
+    }
+  }
+}
+
+const user: User = new User('Joel', 8);
+user.showName();
 
 
 
