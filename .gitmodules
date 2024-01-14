@@ -1,0 +1,3 @@
+[submodule "desafio01-ts"]
+	path = ./desafio01-ts
+	url = git@github.com:digitalinnovationone/desafio01-ts.git
